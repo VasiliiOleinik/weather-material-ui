@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch, Router } from 'react-router-dom';
 
-function App() {
+import './App.css'
+import 'semantic-ui-css/semantic.min.css';
+
+import history from './utils/history';
+
+import Page404 from './pages/Page404';
+import TheLayout from './containers/TheLayout';
+
+const App = props => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <Switch>
+        <Route path="/404" name="Page 404" render={() => <Page404 />} />
+        <Route path="/" name="Главная страница" render={props => <TheLayout {...props} />} />
+      </Switch>
+    </Router>
   );
 }
 

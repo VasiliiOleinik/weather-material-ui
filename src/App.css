@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.d-flex {
   display: flex;
+}
+.flex-column {
   flex-direction: column;
+}
+.ai-center {
   align-items: center;
+}
+.justify-center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.justify-between {
+  justify-content: space-between;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.weather-cards .ui.card {
+  width: 100%;
 }
+.weather-cards .weather-detail {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.weather-cards .weather-detail::before {
+  content: ''; /* Выводим линию */
+  border-bottom: 1px dashed #ccc; /* Параметры линии */
+  flex-grow: 1; /* Линия занимает всё доступное пространство */
+  order: 2; /* Выводим вторым */
+  margin: 0 5px; /* Расстояние от текста */
+ }
+ .weather-cards .weather-detail span:last-of-type {
+   order: 3;
+ }
