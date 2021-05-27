@@ -12,7 +12,7 @@ const TheFooter = () => (
                 <List.Item as='a' href='https://teleg.run/vasiliy_oleinik'>
                     Разработка: Василий Олейник
                 </List.Item>
-                <List.Item as='a' href='https://github.com/VasiliiOleinik/weather-material-ui'>
+                <List.Item as='a' href='https://github.com/VasiliiOleinik/weather-semantic-ui'>
                     GitHub
                 </List.Item>
                 <List.Item as='a' href='https://www.linkedin.com/in/oleinik-vasiliiy/'>
