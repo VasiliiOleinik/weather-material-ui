@@ -25,12 +25,21 @@ body {
   margin-bottom: 10px;
 }
 .weather-cards .weather-detail::before {
-  content: ''; /* Выводим линию */
-  border-bottom: 1px dashed #ccc; /* Параметры линии */
-  flex-grow: 1; /* Линия занимает всё доступное пространство */
-  order: 2; /* Выводим вторым */
-  margin: 0 5px; /* Расстояние от текста */
+  content: '';
+  border-bottom: 1px dashed #ccc;
+  flex-grow: 1;
+  order: 2;
+  margin: 0 5px;
  }
  .weather-cards .weather-detail span:last-of-type {
    order: 3;
+ }
+
+ @media(max-width: 550px) {
+   body .weather-cards>.two.column {
+     flex-direction: column;
+   }
+   body .app .weather-cards>.two.column>.column {
+     width: 100% !important
+   }
  }
